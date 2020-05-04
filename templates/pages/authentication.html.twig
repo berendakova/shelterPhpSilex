@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <title>Shelter</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="stylesheet" href="{{ asset('/tmp/css/normalize.css', 'css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('/tmp/css/style.css', 'css') }}" type="text/css" />
+    <link href="{{ asset ("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700")}}" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="{{ asset("/tmp/lib/bootstrap/css/bootstrap.css") }}"rel="stylesheet">
+
+    <link href="{{ asset("/tmp/lib/font-awesome/css/font-awesome.min.css") }} "rel="stylesheet">
+    <link href="{{ asset('/tmp/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset("/tmp/lib/ionicons/css/ionicons.min.css") }}" rel="stylesheet">
+    <link href="{{asset("/tmp/lib/owlcarousel/assets/owl.carousel.min.css")}}" rel="stylesheet">
+    <link href="{{ asset("/tmp/lib/lightbox/css/lightbox.min.css") }}" rel="stylesheet">
+
+</head>
+<header id="header">
+
+
+    <div class="container">
+
+        <div class="logo float-left">
+            <h1 class="text-light"><a href="#intro" class="scrollto"><span>Shelter</span></a></h1>
+        </div>
+
+        <nav class="main-nav float-right d-none d-lg-block">
+            <ul>
+                <li><a href="/">Home</a></li>
+
+                    <li><a href="/registration">Registration</a></li>
+
+                    <li><a href="/auth">Authentication</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+<form action=" " method="post" style="margin-top: 150px">
+
+    <h1>Sign Up</h1>
+
+    <fieldset>
+
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="email" placeholder="example@example.com">
+
+        <label for="password1">Password:</label>
+        <input type="password" id="password1" name="password">
+
+        {% if errors is not empty %}
+            {% for error in errors %}
+                <p>{{ error }}</p> <br>
+            {% endfor %}
+        {% endif %}
+
+    </fieldset>
+
+
+    <button type="submit">Sign Up</button>
+</form>
+
+</body>
+
+
+</html>
